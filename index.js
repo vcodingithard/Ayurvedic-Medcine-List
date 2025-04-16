@@ -4,6 +4,10 @@ const PORT = 3000;
 
 const medicines = require('./medicines');
 
+app.get("/",(req,res)=>{
+  res.redirect("/api/medicines")
+})
+
 app.get('/api/medicines', (req, res) => {
   res.json(medicines);
 });
