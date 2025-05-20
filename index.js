@@ -44,11 +44,19 @@ const app = express();
 const PORT = 3000;
 
 // CORS options
+// const corsOptions = {
+//   origin: "*",
+//   credentials: true,
+//   methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
+// };
+
 const corsOptions = {
-  origin: "*",
-  credentials: true,
+  origin: "*", // allow any origin
+  credentials: false, // no cookies or Authorization headers
   methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
 };
+
+
 
 // Apply CORS middleware
 app.use(cors(corsOptions));
